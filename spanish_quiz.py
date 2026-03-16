@@ -1,6 +1,8 @@
 import csv
 import random
 
+# Location of Spanish_Vocab.csv
+filepath = r"C:\Users\danny\OneDrive\Documents\Spanish_Vocab.csv"
 
 def get_vocabulary_words(filename):
     """
@@ -183,7 +185,7 @@ def run_quiz():
     """
 
     # Load the vocabulary words.
-    words = get_vocabulary_words('Spanish_Vocab.csv')
+    words = get_vocabulary_words(filepath)
 
     # Track how many answers the user gets correct.
     score = 0
@@ -191,6 +193,7 @@ def run_quiz():
     # A SET used to track Spanish words already used in this session.
     used_spanish_words = set()
 
+    print("")
     print("Spanish Flashcard Game")
     print("Choose the correct English meaning for each Spanish word.")
     print("")
